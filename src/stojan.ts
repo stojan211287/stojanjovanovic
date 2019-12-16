@@ -1,5 +1,11 @@
 import './styles.scss';
 
+// Import NoiseJS ---> https://github.com/josephg/noisejs.git
+import { noise } from './noisejs/perlin.js';
+
+// Define starting seed for Perlin noise
+var start_seed = 1337;
+
 const seedButton = document.getElementById('seed') as HTMLDivElement;
 
 const canvases = document.getElementsByTagName("canvas") as []HTMLCanvasElement;
@@ -15,18 +21,35 @@ function updateCanvasSize() {
     canvas.height = window.innerHeight;
 }
 
-function hexagon(x, y, r) {
+function hexagon(x: number, y: numer, r: number) {
   let angle = 0;
   for(let i = 0; i < 6; i ++) {
-    context.lineTo(x + Math.cos(angle) * r, y + Math.sin(angle) * r);
+    const p = perlinize(x + Math.cos(angle) * r, y + Math.sin(angle) * r);
+    context.lineTo(p.x, p.y);
     angle += Math.PI / 3;
   }
   context.closePath();
 }
 
-/* MAIN */
+/* Function that takes a point coordinate and returns a Perlin-noise-perturbed point */
+function perlinize(x: number, y: number) {
+  const scale = 0.01;
+  const strength = 20;
+ 
+  const angle = noise.perlin2(x * scale, y * scale) * Math.PI;
 
-function main() {
+  return {
+    x: x + Math.cos(angle) * strength,
+    y: y + Math.sin(angle) * strength,
+  }
+}
+
+/* Background drawing function */
+
+function drawTiles(seed: number = seed) {
+
+  // Seed the Perlin noise function
+  noise.seed(seed);
 
   updateCanvasSize();
 
@@ -50,5 +73,8 @@ function main() {
   }
 }
 
-window.addEventListener('resize', ()=>main());
-main();
+/* Add event listeners and draw background */
+window.addEventListener('click', ()=>{seed = (seed + 5) % (2**16-1); drawTiles(seed);})
+window.addEventListener('resize', ()=>drawTiles());
+
+drawTiles();
