@@ -1,14 +1,14 @@
 {
-  "name": "johngranstrom",
+  "name": "stojanjovanovicbusinesscard",
   "version": "1.0.0",
-  "description": "Personal website",
+  "description": "Personal website for Stojan Jovanovic, forked from the personal website of John Granstrom",
   "main": "server.js",
   "scripts": {
     "start": "node .",
     "dev": "parcel src/index.pug",
     "build": "NODE_ENV=production node build"
   },
-  "author": "John Granström",
+  "author": "Stojan Jovanovic",
   "license": "MIT",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
