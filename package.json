@@ -11,7 +11,7 @@
   "author": "John Granström",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "1.10.2",
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.14.1",
     "typescript": "^3.1.1"
   },
