@@ -92,7 +92,7 @@ function redraw() {
 }
 
 /* Add event listeners and draw background */
-window.addEventListener('click', ()=>redraw());
+// window.addEventListener('click', ()=>redraw());
 window.addEventListener('resize', ()=>drawTiles());
 
 drawTiles();
