@@ -20,6 +20,11 @@
     "express": "^4.16.3",
     "morgan": "^1.9.1",
     "pug": "^2.0.3",
-    "deasync": "^0.1.16"
+    "deasync": "^0.1.16",
+    "node-forge": ">=0.10.0",
+    "yargs-parser": ">=15.0.1",
+    "dot-prop": ">=4.2.1",
+    "elliptic": ">=6.5.3",
+    "lodash": ">=4.17.19"
   }
 }
