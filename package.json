@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node .",
     "dev": "parcel src/index.pug",
-    "build": "NODE_ENV=production node build"
+    "build": "NODE_ENV=production node build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "Stojan Jovanovic",
   "license": "MIT",
