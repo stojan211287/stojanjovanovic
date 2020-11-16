@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website for Stojan Jovanovic, forked from the personal website of John Granstrom",
   "main": "server.js",
+  "homepage": "/stojanjovanovic",
   "scripts": {
     "start": "node .",
     "dev": "parcel src/index.pug",
