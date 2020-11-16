@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Personal website for Stojan Jovanovic, forked from the personal website of John Granstrom",
   "main": "server.js",
+  "homepage": "/stojanjovanovic",
   "scripts": {
     "start": "node .",
     "dev": "parcel src/index.pug",
-    "build": "NODE_ENV=production node build"
+    "build": "NODE_ENV=production node build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "Stojan Jovanovic",
   "license": "MIT",
@@ -20,6 +22,11 @@
     "express": "^4.16.3",
     "morgan": "^1.9.1",
     "pug": "^2.0.3",
-    "deasync": "^0.1.16"
+    "deasync": "^0.1.16",
+    "node-forge": ">=0.10.0",
+    "yargs-parser": ">=15.0.1",
+    "dot-prop": ">=4.2.1",
+    "elliptic": ">=6.5.3",
+    "lodash": ">=4.17.19"
   }
 }
