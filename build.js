@@ -3,7 +3,7 @@ const Path = require('path');
 const JSIIFEPackager = require('./build/JSIIFEPackager');
 
 const options = {
-  outDir: '.',
+  outDir: './dist',
   publicUrl: '.',
   watch: false,
   cache: false,
