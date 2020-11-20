@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{hyperref}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{} % Profile picture
+
+\cvname{Stojan Jovanovi\'{c}, Ph.D.} % Your name
+\cvjobtitle{Senior Data Scientist \& \newline AI Systems Architect} % Job title/career
+
+\cvdate{} % Date of birth
+\cvaddress{Oxfordshire,\newline United Kingdom} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{} % Phone number
+\cvsite{} % Personal website
+\cvmail{stojan.jovanovic2112@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{As a professional with years of experience in computational \& data science, I am comfortable with every part of the modern analytics workflow, from deploying the first data pipelines and initial model prototyping to ML/Data/DeepOps. \newline In addition, I have considerable expertise in the field of data \& ML systems architecture, having designed both computational infrastructure, as well as high-performance systems, built to support AI solutions. \newline So far,  I have worked professionally in the domains of finance, advertising and healthcare.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{Scala/3.0},  {Ansible/ 4.0}, {DB Systems, PostgreSQL/4.4},  {Streamlit, Shiny, Plotly/ 4.3},  {Jupyter, Nteract/ 5.0}, {HPC systems, SLURM, Torque/ 4.3},  {*nix admin, systemd, bash /4.7},  {Docker, Enroot/4.9}, {Dask, Ray, Modin, Spark/ 5.0},  {Pandas, Numpy, Scikit-Learn/5.8}, {Tensorflow, Keras/5.5}, {git/5.0}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+%\skillstext{}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+%\section{Interests}
+
+%functional programming,  probabilistic programming, test-driven development, video games, Magic the Gathering, screenwriting, baking
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+          \twentyitem{04/20 - now} {Lead Data Scientist}{Sensyne Health Plc, Oxford, UK}{Led a team of 4 people in a project to find clinical predictors of Covid-19 disease severity from real-world EPR data, resulting in 2 publications. Orchestrated deployment of HPC facilities in the company's AI lab.}
+	\twentyitem{01/20 - 04/20}{Machine Learning Architect}{Sensyne Health Plc, Oxford, UK}{Served as DeepOps/ ML engineering lead for company's AI lab, reporting to one of the company's managing directors. Led deployment of central database server, storing sensitive patient data from NHS trust partners. Designed and helped deploy the AI lab's remote working infrastructure at the onset of Covid-19 pandemic. }
+	\twentyitem{04/19 - 12/19 } {Senior Machine Learning Researcher}{Sensyne Health Plc, Oxford, UK}{Patented ML solutions for risk prediction and unsupervised detection of sub-populations in heart disease patients. Co-led the design and implementation of complex ML pipeline for a large commercial  project, facilitating collaboration by 3 teams of 30 data scientists.}
+	\twentyitem{05/18 - 03/19}{Machine Learning Engineer}{Adverai Ltd, Stockholm, Sweden}{Designed and engineered Adverai's entire ML microservice stack. Introduced time-series prediction and anomaly detection functionality to the company's core software product.}
+	\twentyitem{04/17 - 05/18}{Data Scientist}{Qliro AB, Stockholm, Sweden}{Designed and built a system for scheduled re-training and scoring of credit risk models on top of Hadoop, Spark and H2O.ai, automating manual credit reserve reporting processes. Helped move ETL processes from SQL to Hadoop, as the company expanded into new markets.}
+	\twentyitem{04/16 - 04/17}{Data Scientist}{Kavli Institute, Trondheim, Norway}{Developed a novel, latent-variable RNN to predict time series of electrical activity of rat neurons. Currently preparing a publication with the person that continued my research.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Personal Projects}
+
+\begin{twentyshort}
+	\twentyitemshort {MLHub}{A small ML playground web service, based on FloydHub. Built using Flask, Jinja2, Keras and Tensorflow. Hosted on Heroku.\newline More info found here ---> \href{https://stojan211287.github.io/MLHubDemo/}{link}}
+	\twentyitemshort {CallingCard}{A minimalist digital business card, written in Javascript.\newline The business card can be found here ---> \href{https://stojan211287.github.io/stojanjovanovic/}{link}}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2012 - 2016}{Ph.D.  in Comp. Neuroscience \& Computer Science}{Magna Cum Laude}{ Bernstein Centre Freiburg, Freiburg im Breisgau, Germany\newline  KTH Royal Institute of Technology, Stockholm, Sweden\newline Erasmus Mundus Joint PhD Programme}
+	\twentyitem{2010 - 2011}{M.Sc. in  Applied Mathematics \& Operations Research}{9.5/10.0 GPA}{University of Belgrade, Serbia.\newline Principal subjects: stochastic calculus \& graph theory}
+	\twentyitem{2006 - 2010}{B.Sc. in Statistics, Actuarial and Financial Mathematics}{9.2/10.0 GPA}{University of Belgrade, Serbia\newline Principal subjects: probability theory, mathematical statistics, \newline financial and actuarial mathematics}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%\begin{twenty}
+%\twentyitem{1234}{lalal}{lalala}{lalalalalalla}
+%\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\section{Invited talks and study visits}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{02/17}{Visiting Researcher at the Institute for Advanced Study, Princeton, New Jersey}
+	\twentyitemshort{08/16}{Invited to speak at the Institute for Materials Science, Los Alamos National Lab, Los Alamos, New Mexico}
+
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+%\section{Publications}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{2016}{Jovanovi\'{c}, Stojan, and Stefan Rotter\newline "Interplay between graph topology  and correlations of \newline third order in spiking neuronal networks."\newline PLoS computational biology 12.6 (2016): e1004963}
+%	\twentyitemshort{2015}{Jovanovi\'{c}, Stojan, John Hertz, and Stefan Rotter\newline "Cumulants of Hawkes point processes."  \newline Physical Review E 91.4 (2015): 042802}
+	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+%\section{Awards}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+%	\twentyitemshort{1987}{All-Time Best Fantasy Novel.}
+%	\twentyitemshort{1998}{All-Time Best Fantasy Novel before 1990.}
+%	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+%\section{Other information}
+
+%\subsection{Invited talks, study visits and training}
+
+%\begin{twentyshort} % Environment for a short list with no descriptions
+	%\twentyitemshort{02/2017}{Hosted by the Institute for Advanced Study, Princeton, New Jersey during a 2 week study visit}
+	%\twentyitemshort{08/2016}{Invited to speak at the Institute for Materials Science, Los Alamos National Lab, Los Alamos, New Mexico}
+	%\twentyitemshort{07/2016}{Attended the Berkeley Summer Course in Mining and Modeling of Neuroscience Data, UC Berkeley, Berkeley, California }
+
+	%\twentyitemshort{<dates>}{<title/description>}
+%\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
