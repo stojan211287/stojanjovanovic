@@ -4,7 +4,7 @@ import './styles.scss';
 import { noise } from './noisejs/perlin.js';
 
 // Define starting seed for Perlin noise
-var seed = 567122400;
+var pageSeed = 567122400;
 
 // Perlin noise params
 const perlinScale = 0.01;
@@ -25,7 +25,7 @@ function updateCanvasSize() {
 }
 
 /* Hexagon drawing function */ 
-function hexagon(x: number, y: numer, r: number) {
+function hexagon(x: number, y: number, r: number) {
   let angle = 0;
   for(let i = 0; i < 6; i ++) {
     const p = perlinize(x + Math.cos(angle) * r, y + Math.sin(angle) * r);
@@ -57,7 +57,7 @@ function shade(x: number, y: number) {
 
 /* Background drawing function */
 
-function drawTiles(seed: number = seed) {
+function drawTiles(seed: number = pageSeed) {
 
   // Seed the Perlin noise function
   noise.seed(seed);
@@ -86,13 +86,7 @@ function drawTiles(seed: number = seed) {
   }
 }
 
-function redraw() {
-  seed = (seed + 5) % (2**16-1); 
-  drawTiles(seed);
-}
-
 /* Add event listeners and draw background */
-// window.addEventListener('click', ()=>redraw());
 window.addEventListener('resize', ()=>drawTiles());
 
 drawTiles();
